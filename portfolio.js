@@ -12,3 +12,11 @@ However, IEXCloud documentation states that one of the keys you get are publisha
  */
 process.env.IEXCLOUD_API_VERSION = "stable";
 process.env.IEXCLOUD_PUBLIC_KEY = "pk_4e60ef6ed32f470b879c3afc392ebdec";
+//Here I call the iexcloud_api_wrapper module
+const  iex = require( 'iexcloud_api_wrapper' )
+//asynchronous functions are used to properly call the stock data. None asynchronous functions return an incomplete variable/object
+//this function draws the latest price of a share
+const quote = async (sym) => {
+    const quoteData = await iex.quote(sym);
+    return quoteData['latestPrice'];
+};
