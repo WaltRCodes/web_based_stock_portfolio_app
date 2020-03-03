@@ -20,3 +20,12 @@ const quote = async (sym) => {
     const quoteData = await iex.quote(sym);
     return quoteData['latestPrice'];
 };
+//this function populates and array with all the stock symbols drawn from IEXCloud
+const getSymbols = async (arrParam) => {
+    const arrayData = await iex.iexSymbols();
+    let i = 0;
+    for(let data of arrayData){
+        arrParam.push(data['symbol']);
+        i++;
+    }
+};
