@@ -29,3 +29,15 @@ const getSymbols = async (arrParam) => {
         i++;
     }
 };
+//this function populates the object with the stock names and prices while also populating the array with the list elements that will be displayed on the webpage.
+const fillObject = async (objParam,arrayParam) =>{
+    let symbols = [];
+    await getSymbols(symbols);
+    
+    for(let symbol of symbols){
+        objParam[symbol] = await quote(symbol);
+        arrayParam.push(`<li tabindex="1" id=${symbol} value=${object[symbol]}>Buy ${symbol} at ${object[symbol]} per Share!</li><br>`);
+    }
+}
+//Here is the call of the fill function and the creation of the server object that will display the webpage
+fillObject(object,array);
