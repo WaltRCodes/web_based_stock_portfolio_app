@@ -1,0 +1,27 @@
+{
+  "name": "web_based_stock_portfolio_app",
+  "version": "1.0.0",
+  "description": "web based stock portfolio app built with node",
+  "main": "portfolio.js",
+  "dependencies": {
+    "iexcloud_api_wrapper": "^1.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaltRCodes/web_based_stock_portfolio_app.git"
+  },
+  "keywords": [
+    "node",
+    "IEXCloud"
+  ],
+  "author": "Walter Rada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaltRCodes/web_based_stock_portfolio_app/issues"
+  },
+  "homepage": "https://github.com/WaltRCodes/web_based_stock_portfolio_app#readme"
+}
